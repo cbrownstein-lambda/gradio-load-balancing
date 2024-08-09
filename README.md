@@ -51,7 +51,9 @@ balancer](https://docs.nginx.com/nginx/admin-guide/load-balancer/http-load-balan
    [Firewall](https://docs.lambdalabs.com/on-demand-cloud/firewall) to allow
    TCP traffic to port 80.
 
-   ⚠️ **WARNING:** This proof of concept has no authentication. ⚠️
+   ⚠️ **WARNING:** This proof of concept requires no authentication. Anyone
+   with your instance's IP address will be able to access the server (but not
+   log into your instance). ⚠️
 
 1. Access the server at http://INSTANCE-IP-ADDRESS.
 
