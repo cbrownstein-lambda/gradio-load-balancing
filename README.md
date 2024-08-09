@@ -12,6 +12,8 @@ running 8 Gradio apps. Each app will:
 - Use a single GPU.
 - Listen on a localhost port, TCP/{7860..7867}.
 - Serve the FLUX.1 [schnell] prompt-to-image model.
+- Log to a file named `log_{0..7}.txt`, the number representing the GPU the
+  app is using.
 
 Nginx, acting as a load balancer (reverse proxy), will balance requests to the
 server between the 8 apps.
