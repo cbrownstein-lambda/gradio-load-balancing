@@ -3,20 +3,24 @@ Proof of concept for implementing load balancing for a Gradio app
 
 ## Description
 
-This proof of concept demonstrates how a Gradio app can use multiple GPUs in a
-[Lambda Cloud](https://cloud.lambdalabs.com/instances) on-demand instance.
+This proof of concept demonstrates how a [Gradio](https://www.gradio.app/) app
+can use multiple GPUs in a [Lambda
+Cloud](https://lambdalabs.com/service/gpu-cloud) on-demand instance.
 
 By following the instructions below, you'll have an 8x H100 or 8x A100
 running 8 Gradio apps. Each app will:
 
 - Use a single GPU.
 - Listen on a localhost port, TCP/{7860..7867}.
-- Serve the FLUX.1 [schnell] prompt-to-image model.
+- Serve the [FLUX.1
+  [schnell]](https://huggingface.co/black-forest-labs/FLUX.1-schnell)
+  prompt-to-image model.
 - Log to a file named `log_{0..7}.txt`, the number representing the GPU the
   app is using.
 
-Nginx, acting as a load balancer (reverse proxy), will balance requests to the
-server between the 8 apps.
+[Nginx](https://nginx.org/en/), acting as a [load
+balancer](https://docs.nginx.com/nginx/admin-guide/load-balancer/http-load-balancer/)
+(reverse proxy), will balance requests to the server between the 8 apps.
 
 ## Usage
 
