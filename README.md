@@ -51,5 +51,5 @@ server between the 8 apps.
 
 1. Access the server at http://INSTANCE-IP-ADDRESS.
 
-   Replace **INSTANCE-IP-ADDRESS ** with your instance's IP address, which you
+   Replace **INSTANCE-IP-ADDRESS** with your instance's IP address, which you
    can get from the Cloud dashboard or using the Cloud API.
