@@ -8,7 +8,7 @@ CUDA_DEVICES=(0 1 2 3 4 5 6 7)
 
 # export GRADIO_SERVER_NAME=127.0.0.1
 
-cd "${HOME}"
+cd "${PWD}"
 git clone "${FLUX_REPO_URL}" flux && cd flux
 
 python3 -m venv .venv
