@@ -12,6 +12,11 @@ running 8 Gradio apps. Each app will:
 
 - Use a single GPU.
 - Listen on a localhost port, TCP/{7860..7867}.
+
+  💡 **Note:** You can set the `GRADIO_SERVER_NAME` environment variable to `0.0.0.0`
+  to make the apps network-accessible. This can be useful for load balancing between
+  multiple instances. Make sure to configure appropriate firewall rules!
+
 - Serve the [FLUX.1
   [schnell]](https://huggingface.co/black-forest-labs/FLUX.1-schnell)
   prompt-to-image model.
